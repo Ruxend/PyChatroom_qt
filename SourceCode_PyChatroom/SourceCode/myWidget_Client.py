@@ -44,10 +44,10 @@ class myWidget_Login(QMainWindow, ui_Login):
 	def get_conn_mq(self):
 		# 连接mysql服务
 		try:
-			self.mq = pymysql.connect(host="47.112.101.30",	# mysql服务器所在的主机ip
+			self.mq = pymysql.connect(host="127.0.0.1",	# mysql服务器所在的主机ip
 								port=3306,			# 连接的mysql主机的端口,默认是3306
 								user="root",		# 用户名
-								password="rootpwd",	# 密码
+								password="root",	# 密码
 								db="user",			# 连接的数据库名
 								# autocommit=True,	# Automatic submission
 								charset="utf8")		# 当读取数据出现中文会乱码的时候,python3默认采用的utf-8字符集
@@ -74,8 +74,7 @@ class myWidget_Login(QMainWindow, ui_Login):
 		self.get_user_info()
 		# 登录
 		global IP, PORT, user
-		# ip = "127.0.0.1:2204"
-		ip = "47.112.101.30:2204" # self.entry_ip.text().strip()
+		ip = "127.0.0.1:2204"
 		user = self.entry_user.text()
 		pwd = self.entry_pwd.text()
 		if user:

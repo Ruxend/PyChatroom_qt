@@ -4,8 +4,7 @@ import socket,threading,queue,os,sys
 import json  # json.dumps(some)打包   json.loads(some)解包
 import os.path
 
-# IP = "127.0.0.1"
-IP = 172.17.91.24
+IP = "127.0.0.1"
 PORT = 2204	 # 端口
 messages = queue.Queue()
 lst_users = []   # 用户连接队列 0:userName 1:connection
